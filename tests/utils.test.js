@@ -4,6 +4,17 @@ test('Salida de Nombre edad, y Nivel',()=>{
     const text = generateText('Nataly',22,'Licenciatura');
     expect(text).toBe('Registro OK de Nataly en: Licenciatura.')
 });
+
+
+test('Salida de Nombre edad, y Nivel',()=>{
+    const nombre = 'Nataly';
+    const text = generateText(nombre,22,'Licenciatura');
+    const nombre2= text.includes(nombre);
+    expect(nombre2).toBe(true);
+});
+
+// 'Registro OK de Nataly en: Licenciatura.
+
 test('Salida de Nombre edad, y Nivel con 18',()=>{
     const text = generateText('Aylen',18,'Maestría');
     expect(text).toBe('Registro OK de Aylen en: Maestría.')
@@ -16,6 +27,17 @@ test('Salida de Nombre edad, y Nivel(menor de 18)',()=>{
     const text = generateText('Marco',17,'Maestría');
     expect(text).toBe('Edad ingresada no válida. Por favor intentá nuevamente.')
 });
+
+test('Salida de Nombre edad, y Nivel(menor de 18)',()=>{
+    const text = generateText('Paloma',30);
+    expect(text).toBe('Registro OK de Paloma en: undefined.')
+});
+
+// test('a ver',()=>{
+//     const name = generateText('Paloma');
+//     expect(name).toBe('Paloma')
+// });
+
 
 test("ValidateInput caso 1", () => {
     expect(validateInput("a", true)).toBeTruthy();
