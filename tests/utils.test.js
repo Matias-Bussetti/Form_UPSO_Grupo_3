@@ -6,14 +6,18 @@ test('Salida de Nombre edad, y Nivel',()=>{
 });
 
 
-test('Salida de Nombre edad, y Nivel',()=>{
+test('Dato name',()=>{
     const nombre = 'Nataly';
     const text = generateText(nombre,22,'Licenciatura');
     const nombre2= text.includes(nombre);
     expect(nombre2).toBe(true);
 });
-
-// 'Registro OK de Nataly en: Licenciatura.
+test('Dato level',()=>{
+    const level = 'Licenciatura';
+    const text = generateText('Martina',22,level);
+    const level2= text.includes(level);
+    expect(level2).toBe(true);
+});
 
 test('Salida de Nombre edad, y Nivel con 18',()=>{
     const text = generateText('Aylen',18,'Maestría');
