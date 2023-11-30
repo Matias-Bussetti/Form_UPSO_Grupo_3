@@ -37,25 +37,32 @@ test('Salida de Nombre edad, y Nivel(menor de 18)',()=>{
     expect(text).toBe('Registro OK de Paloma en: undefined.')
 });
 
-// test('a ver',()=>{
-//     const name = generateText('Paloma');
-//     expect(name).toBe('Paloma')
-// });
+// --------------------------------------------------------------------------------------------------------
 
-
-test("ValidateInput caso 1", () => {
+test("Input valido no nulo", () => {
     expect(validateInput("a", true)).toBeTruthy();
   });
   
-  test("ValidateInput caso 2", () => {
+  test("Input vacio pero nulo", () => {
     expect(validateInput(" ", false)).toBeTruthy();
   });
   
-  test("ValidateInput caso 3", () => {
+  test("Input vacio no nulo", () => {
     expect(validateInput("", false)).toBeFalsy();
   });
   
-  test("Validate Input caso falso", () => {
-    expect(validateInput("", false)).toBeFalsy();
+  test("Input númerico 0 no nulo ", () => {
+    expect(validateInput(0, true)).toBe(true);
   });
   
+  test("Input númerico distinto de 0 no nulo ", () => {
+    expect(validateInput(1, true)).toBe(true);
+  });
+  
+  test("Retorno Definido de función", () => {
+    expect(validateInput(1, true)).toBeDefined();
+  });
+  test('Salida de Nombre edad, y Nivel(menor de 18)',()=>{
+      const text = generateText('Paloma',30);
+      expect(text).toBe('Registro OK de Paloma en: undefined.')
+  });
