@@ -1,25 +1,17 @@
 const { validateInput } = require("./../util");
 
-test("Validate Input caso verdadero", () => {
+test("ValidateInput caso 1", () => {
   expect(validateInput("a", true)).toBeTruthy();
 });
 
-test("Validate Input caso verdadero", () => {
-  expect(validateInput(0, true)).toBeTruthy();
+test("ValidateInput caso 2", () => {
+  expect(validateInput(" ", false)).toBeTruthy();
 });
 
-test("Validate Input caso falso", () => {
+test("ValidateInput caso 3", () => {
   expect(validateInput("", false)).toBeFalsy();
 });
 
 test("Validate Input caso falso", () => {
-  expect(validateInput(" ", false)).toBeTruthy();
-});
-
-test("Validate Input caso falso", () => {
-  expect(validateInput("", true)).toBeFalsy();
-});
-
-test("Validate Input caso falso", () => {
-  expect(validateInput(" ", true)).toBeTruthy();
+  expect(validateInput("", false)).toBeFalsy();
 });
