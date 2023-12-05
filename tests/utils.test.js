@@ -66,3 +66,7 @@ test("Input valido no nulo", () => {
       const text = generateText('Paloma',30);
       expect(text).toBe('Registro OK de Paloma en: undefined.')
   });
+
+  test("Test faltaba ", () => {
+    expect(validateInput(" ", true)).toBe(false);
+  });
