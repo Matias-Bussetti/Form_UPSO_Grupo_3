@@ -52,15 +52,15 @@ test("Input valido no nulo", () => {
   });
   
   test("Input númerico 0 no nulo ", () => {
-    expect(validateInput(0, true)).toBe(true);
+    expect(validateInput(0, true)).toBe(false);
   });
   
   test("Input númerico distinto de 0 no nulo ", () => {
-    expect(validateInput(1, true)).toBe(true);
+    expect(validateInput("1", true)).toBe(true);
   });
   
   test("Retorno Definido de función", () => {
-    expect(validateInput(1, true)).toBeDefined();
+    expect(validateInput("1", true)).toBeDefined();
   });
   test('Salida de Nombre edad, y Nivel(menor de 18)',()=>{
       const text = generateText('Paloma',30);

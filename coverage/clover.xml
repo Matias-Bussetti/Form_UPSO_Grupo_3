@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1701812271145" clover="3.2.0">
-  <project timestamp="1701812271145" name="All files">
+<coverage generated="1701812965966" clover="3.2.0">
+  <project timestamp="1701812965966" name="All files">
     <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2" elements="28" coveredelements="28" complexity="0" loc="14" ncloc="14" packages="1" files="1" classes="1"/>
     <file name="util.js" path="C:\Users\beltr\Desktop\testing_tp3\Form_UPSO_Grupo_3\util.js">
       <metrics statements="14" coveredstatements="14" conditionals="12" coveredconditionals="12" methods="2" coveredmethods="2"/>
@@ -17,7 +17,7 @@
       <line num="25" count="2" type="stmt"/>
       <line num="27" count="5" type="cond" truecount="4" falsecount="0"/>
       <line num="28" count="1" type="stmt"/>
-      <line num="30" count="2" type="stmt"/>
+      <line num="30" count="4" type="stmt"/>
     </file>
   </project>
 </coverage>
